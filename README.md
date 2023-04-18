@@ -1,7 +1,6 @@
-# cp4d_deployment
+# config that is used to run the cloud-pak-deployer for a CP4D instance
 
-TODO: 
-- wirte bash script that loads the newest config from github
-	- what it should do:
-		- pull changes for cpd-config from github
-		- run the cloud-pak-deployer script
+This is part of a small scale GitOps Approach to hosting CP4D --> do all the changes here! Never change something directly on the VM!
+
+it utilizes the Cloud Pak Deployer
+https://github.com/IBM/cloud-pak-deployer
