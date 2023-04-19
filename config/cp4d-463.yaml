@@ -40,7 +40,7 @@ cp4d:
     state: removed
 
   - name: cde
-    state: removed
+    state: installed
 
   - name: datagate
     state: removed
