@@ -53,7 +53,7 @@ openshift:
 - name: "{{ env_id }}"
   ocp_version: 4.10.53 # it is necessary to specify minor version because cloudpak deployer turns 4.10 into 4.1 otherwise :-( 
   compute_flavour: bx2.16x64
-  compute_nodes: 8
+  compute_nodes: 9
   infrastructure:
     type: vpc
     vpc_name: "{{ env_id }}"
