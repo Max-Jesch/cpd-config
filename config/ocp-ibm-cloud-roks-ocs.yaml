@@ -3,7 +3,7 @@ global_config:
   environment_name: sample
   cloud_platform: ibm-cloud
   ibm_cloud_region: eu-de
-  env_id: cpd4d-csm-dach #has to be all lowercase and ruther short because VPCs get the same name 
+  env_id: cp4d-csm-dach #has to be all lowercase and ruther short because VPCs get the same name 
 
 provider:
 - name: ibm
@@ -51,7 +51,7 @@ cos:
 
 openshift:
 - name: "{{ env_id }}"
-  ocp_version: 4.10.53 # it is necessary to specify minor version because cloudpak deployer turns 4.10 into 4.1 otherwise :-( 
+  ocp_version: 4.12.13 # it is necessary to specify minor version because cloudpak deployer turns 4.10 into 4.1 otherwise :-( 
   compute_flavour: bx2.16x64
   compute_nodes: 9
   infrastructure:
