@@ -2,5 +2,5 @@
 
 This is part of a small scale GitOps Approach to hosting CP4D --> do all the changes in Github! Never change something directly on the VM!
 
-it utilizes the Cloud Pak Deployer
+it utilizes the Cloud Pak Deployer: 
 https://github.com/IBM/cloud-pak-deployer
