@@ -68,4 +68,4 @@ openshift:
     storage_type: ocs
     ocs_storage_label: ocs
     ocs_storage_size_gb: 500
-    ocs_version: 4.10.0
+    ocs_version: 4.12.13
