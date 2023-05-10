@@ -178,7 +178,7 @@ cp4d:
       enableKnowledgeGraph: False
       enableDataQuality: False
       enableFactSheet: False
-      enableMANTA: False
+      enableMANTA: True
 
   - name: wml
     size: small
