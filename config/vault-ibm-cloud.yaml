@@ -1,0 +1,5 @@
+---
+vault:
+  vault_type: ibmcloud-vault
+  vault_authentication_type: api-key
+  vault_url: https://39f81e41-766d-42f8-8f39-83eb36eaf20a.eu-de.secrets-manager.appdomain.cloud
