@@ -101,11 +101,11 @@ cp4d:
   # Please note that for EDB Postgress, a secret edb-postgres-license-key must be created in the vault
   # before deploying
   - name: edb_cp4d
-    state: removed
-    instances:
-       #- name: instance0
-        #version: "13.5"
-        #type: Standard
+    state: installed
+  # instances:
+     # - name: instance0
+        #  version: "13.5"
+        #  type: Standard
         #members: 1
         #size_gb: 50
         #resource_request_cpu: 1000m
@@ -174,7 +174,7 @@ cp4d:
     size: small
     state: installed
     installation_options:
-      install_wkc_core_only: False
+      install_wkc_core_only: True
       enableKnowledgeGraph: False
       enableDataQuality: True
       enableFactSheet: False
