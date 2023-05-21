@@ -174,8 +174,8 @@ cp4d:
     size: small
     state: installed
     installation_options:
-      install_wkc_core_only: True
-      enableKnowledgeGraph: False
+      install_wkc_core_only: False
+      enableKnowledgeGraph: True
       enableDataQuality: True
       enableFactSheet: False
       enableMANTA: True
