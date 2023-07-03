@@ -140,7 +140,7 @@ cp4d:
 
   - name: rstudio
     size: small
-    state: removed
+    state: installed
 
   - name: spss
     state: removed
