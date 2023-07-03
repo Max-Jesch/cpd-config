@@ -52,7 +52,7 @@ cos:
 
 openshift:
 - name: "{{ env_id }}"
-  ocp_version: 4.12.20  # it is necessary to specify minor version because cloudpak deployer turns 4.10 into 4.1 otherwise :-(
+  ocp_version: 4.13.0  # it is necessary to specify minor version because cloudpak deployer turns 4.10 into 4.1 otherwise :-(
   compute_flavour: bx2.16x64
   compute_nodes: 12
   infrastructure:
