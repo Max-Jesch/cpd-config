@@ -6,50 +6,12 @@ global_config:
   env_id: cp4d-csm-dach #has to be all lowercase and ruther short because VPCs get the same name
   confirm_destroy: False
 
-provider:
-- name: ibm
-  region: "{{ ibm_cloud_region }}"
-
-resource_group:
-- name: "CP4D-CSM-DACH" # should exist already
-
-security_rule:
-- name: https
-  tcp: {port_min: 443, port_max: 443}
-- name: ssh
-  tcp: {port_min: 22, port_max: 22}
-
-vpc:
-- name: "{{ env_id }}"
-  allow_inbound: ['ssh']
-
-address_prefix:
-- name: "{{ env_id }}-zone-1"
-  zone: "{{ ibm_cloud_region }}-1"
-  cidr: 10.231.0.0/26
-
-subnet:
-- name: "{{ env_id }}-subnet-zone-1"
-  address_prefix: "{{ env_id }}-zone-1"
-  ipv4_cidr_block: 10.231.0.0/26
-
-cos:
-- name: "{{ env_id }}-cos"
-  plan: standard
-  location: global
 
 openshift:
 - name: "{{ env_id }}"
+  cluster_name: "{{ env_id }}"
+  domain_name: cpd-zen-46.cp4d-csm-dach-8cd80e6462885b8080a9985873dae1d8-0000.eu-de.containers.appdomain.cloud
   ocp_version: 4.13.0  # it is necessary to specify minor version because cloudpak deployer turns 4.10 into 4.1 otherwise :-(
-  compute_flavour: bx2.16x64
-  compute_nodes: 6
-  infrastructure:
-    type: vpc
-    vpc_name: "{{ env_id }}"
-    subnets:
-    - "{{ env_id }}-subnet-zone-1"
-    cos_name: "{{ env_id }}-cos"
-    secondary_storage: 900gb.5iops-tier
   openshift_storage:
   - storage_name: ocs-storage
     storage_type: ocs
