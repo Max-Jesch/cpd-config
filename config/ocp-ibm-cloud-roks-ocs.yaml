@@ -1,8 +1,7 @@
 ---
 global_config:
   environment_name: sample
-  cloud_platform: ibm-cloud
-  ibm_cloud_region: eu-de
+  cloud_platform: existing-ocp
   env_id: cp4d-csm-dach #has to be all lowercase and ruther short because VPCs get the same name
   confirm_destroy: False
 
