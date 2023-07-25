@@ -40,13 +40,13 @@ cp4d:
     state: removed
 
   - name: cde
-    state: installed
+    state: removed
 
   - name: datagate
     state: removed
 
   - name: datastage-ent-plus
-    state: installed
+    state: removed
     instances:
       - name: ds-instance
         # Optional settings
@@ -69,13 +69,13 @@ cp4d:
        #  memory_limit: 12Gi
 
   - name: db2
-    size: small
+    size: removed
     instances:
       - name: ca-metastore
-        metadata_size_gb: 40
-        data_size_gb: 40
-        backup_size_gb: 40
-        transactionlog_size_gb: 40
+        metadata_size_gb: 80
+        data_size_gb: 80
+        backup_size_gb: 80
+        transactionlog_size_gb: 80
     state: installed
 
   - name: db2wh
@@ -96,7 +96,7 @@ cp4d:
     size: small
     instances:
     - name: data-virtualization
-    state: installed
+    state: removed
 
   # Please note that for EDB Postgress, a secret edb-postgres-license-key must be created in the vault
   # before deploying
@@ -115,7 +115,7 @@ cp4d:
 
   - name: factsheet
     size: small
-    state: installed
+    state: removed
 
   - name: hadoop
     size: small
@@ -140,7 +140,7 @@ cp4d:
 
   - name: rstudio
     size: small
-    state: installed
+    state: removed
 
   - name: spss
     state: removed
